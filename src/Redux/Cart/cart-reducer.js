@@ -8,7 +8,7 @@ import {
 import { addItemToCart, removeItemsFromCart } from './cart-utils';
 
 const INITIAL_STATE = {
-	hidden: true,
+	hidden: false,
 	cartItems: [],
 	shipping: '',
 };
