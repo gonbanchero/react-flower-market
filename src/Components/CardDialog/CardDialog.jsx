@@ -131,7 +131,7 @@ export const ConfirmButton = styled(Title)`
 	color: white;
 	height: 20px;
 	border-radius: 8px;
-	padding: 10px;
+	padding: 10px 0px;
 	width: 200px;
 	font-weight: 400;
 	cursor: pointer;
@@ -144,8 +144,9 @@ export const ConfirmButton = styled(Title)`
 		opacity: 1;
 	}
 	@media ${devices.mobileL} {
-		width: 80%;
+		width: 100%;
 		margin: 0 auto;
+		font-size: 0.9rem;
 	}
 `;
 

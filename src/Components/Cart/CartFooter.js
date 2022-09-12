@@ -2,9 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { formatPrice } from '../../Data/Products';
 import { Link } from 'react-router-dom';
-import { ConfirmButton } from '../CardDialog/CardDialog';
 import { DialogFooter } from '../CardDialog/CardDialog';
 import { useSelector } from 'react-redux';
+import { Title } from '../../Styles/Title';
+import { celeste } from '../../Styles/Colors';
+import { devices } from '../../Styles/breakpoints';
 
 export const CartFooter = ({ totalCart, handlerToggle }) => {
 	const ShippingInfo = useSelector((state) => state.cart.shipping);
@@ -62,10 +64,15 @@ export const CartFooter = ({ totalCart, handlerToggle }) => {
 
 const Footer = styled(DialogFooter)`
 	flex-direction: column;
+	display: flex;
 	padding-top: 15px;
 	padding-bottom: 15px;
 	align-items: center;
 	z-index: 6666;
+	border-top: 1px solid #9faab7;
+	box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.3);
 `;
 
 const SubTotals = styled.div`
@@ -103,4 +110,28 @@ const MoreProducts = styled.button`
 	background-color: transparent;
 	cursor: pointer;
 	z-index: 9999;
+`;
+
+export const ConfirmButton = styled(Title)`
+	margin: 10px;
+	color: white;
+	height: 20px;
+	border-radius: 8px;
+	padding: 10px;
+	width: 200px;
+	font-weight: 400;
+	cursor: pointer;
+	background-color: ${celeste};
+	text-align: center;
+	&:hover {
+		opacity: 0.7;
+	}
+	&:active {
+		opacity: 1;
+	}
+	@media ${devices.mobileL} {
+		width: 100%;
+		margin: 0 auto;
+		font-size: 0.9rem;
+	}
 `;

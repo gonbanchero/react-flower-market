@@ -79,8 +79,9 @@ const MainTitle = styled(Title)`
 
 const InfoGrid = styled.div`
 	width: 70%;
+
 	display: grid;
-	grid-template-columns: repeat(auto-fill, 250px);
+	grid-template-columns: repeat(auto-fit, 250px);
 	justify-content: center;
 	gap: 20px;
 	align-self: center;
